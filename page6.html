@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Media</title>
+</head>
+<body>
+
+    <h2><u>Media Tag</u></h2>
+    <p>
+      "Media tag" usually refers to the HTML elements used to include media: <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;iframe&gt;</code>. These are native HTML elements — no JavaScript or CSS required to include media files.
+    </p>
+    <p>Example — basic audio and video tags (rendered by the browser):</p>
+    <p>
+      <!-- Example rendered players (these will only work if the files exist at these paths) -->
+      <strong>Audio example</strong><br>
+      <audio controls>
+        <source src="For A Reason .mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </p>
+    <p>
+      <strong>Video example</strong><br>
+    <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/NGYp1zCBthk" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+    </p>
+
+    <h3>Code</h3>
+   <p>Listen to our theme song:</p>
+&lt;audio src="audio/theme-song.mp3" controls&gt;&lt;/audio&gt;
+    <h2>Integrating Audio Files</h2>
+    <p>
+      Use the <code>&lt;audio&gt;</code> element. Provide multiple <code>&lt;source&gt;</code> elements in different formats so more browsers can play the file.
+    </p>
+
+    <h3>Attributes</h3>
+    <ul>
+      <li><code>controls</code> — show play/pause/seek UI provided by the browser.</li>
+      <li><code>autoplay</code> — start playing automatically (often blocked by browsers; see autoplay section).</li>
+      <li><code>loop</code> — restart after ending.</li>
+      <li><code>muted</code> — start muted (useful when autoplaying, since many browsers require muted autoplay).</li>
+      
+      </li>
+    </ul>
+
+    <h3>Example</h3>
+    <pre><code>&lt;audio controls&gt;
+  &lt;source src="audio/song.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element. You can &lt;a href="audio/song.mp3"&gt;download the audio&lt;/a&gt;.
+&lt;/audio&gt;</code></pre>
+
+
+    <h2>Adding Controls to Audio</h2>
+    <p>
+      Add the <code>controls</code> attribute to let users play/pause/seek. If you omit controls, the audio will be invisible unless you add custom controls (requires JavaScript).
+    </p>
+    <h2>Integrating Video Files</h2>
+    <p>
+      The <code>&lt;video&gt;</code> element embeds video. Like audio, supply multiple <code>&lt;source&gt;</code>s and a fallback message.
+    </p>
+
+    <h3>Common attributes</h3>
+    <ul>
+      <li><code>controls</code> — show native UI</li>
+      <li><code>width</code> and <code>height</code> — sizing hints</li>
+      <li><code>poster</code> — image shown before playback starts</li>
+      
+    </ul>
+
+    <h3>Example</h3>
+    <pre><code>&lt;video width="640" height="360" controls poster="images/preview.jpg"&gt;
+  &lt;source src="video/lecture.mp4" type="video/mp4"&gt;
+  &lt;source src="video/lecture.webm" type="video/webm"&gt;
+  Your browser does not support the video tag. &lt;a href="video/lecture.mp4"&gt;Download the video&lt;/a&gt;.
+&lt;/video&gt;</code></pre>
+
+
+
+    <h2>Audio Formats</h2>
+    <p>
+      Use multiple formats for compatibility:
+    </p>
+    <ul>
+      <li><strong>MP3 (audio/mpeg)</strong> — widely supported, good for music and spoken audio.</li>
+      <li><strong>OGG (audio/ogg)</strong> — open format supported in modern browsers (useful fallback).</li>
+      <li><strong>AAC / M4A (audio/mp4)</strong> — good quality, used on many platforms, but licensing can be a consideration.</li>
+    </ul>
+    <p>Provide at least MP3 + OGG for best reach.</p>
+
+    <h2>Why Proper Formats are Needed</h2>
+    <p>
+      Different browsers and devices support different codecs and container formats. Providing multiple formats increases the chance the user's browser can play your media. Also consider file size and network bandwidth when choosing formats and bitrates.
+    </p>
+
+    <h2>Video: Proper Formats</h2>
+    <ul>
+      <li><strong>MP4 (H.264 video + AAC audio)</strong> — the most widely supported combination across browsers and devices.</li>
+      <li><strong>WebM (VP8/VP9 + Vorbis/Opus)</strong> — modern open format; smaller files for comparable quality in many cases.</li>
+      <li><strong>Ogg/Theora</strong> — older, less common now but still supported by some browsers.</li>
+    </ul>
+    <p>Supply MP4 and WebM to cover almost all modern browsers.</p>
+
+
+
+    <h2>Embedding YouTube Videos</h2>
+    <p>
+      Use an <code>&lt;iframe&gt;</code> to embed YouTube. YouTube provides an <em>embed</em> URL (choose the Share &gt; Embed option on YouTube to get the exact URL).
+    </p>
+
+
+    <pre><code>&lt;!-- Replace VIDEO_ID with the video's id (e.g. dQw4w9WgXcQ) --&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+
+    <p>
+      Notes: You can add query parameters to the src, e.g. <code>?rel=0&amp;showinfo=0</code> (YouTube parameters change over time — this is an example). The <code>allowfullscreen</code> attribute permits the user to expand the iframe to fullscreen.
+    </p>
+    <h2>Allow Fullscreen in Videos</h2>
+    <p>
+      For <code>&lt;iframe&gt;</code> embeds (like YouTube), use <code>allowfullscreen</code> or <code>allow="fullscreen"</code>. For the native <code>&lt;video&gt;</code> element, browsers provide a fullscreen control when <code>controls</code> is present.
+    </p>
+
+    <pre><code>&lt;!-- YouTube iframe with fullscreen allowed --&gt;
+&lt;iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen title="Video"&gt;&lt;/iframe&gt;</code></pre>
+  
+    <h2>Multi-Page Websites</h2>
+    <p>
+      A multi-page website is simply multiple HTML files linked together. Example: <code>index.html</code>, <code>about.html</code>, <code>contact.html</code>. Use <code>&lt;a&gt;</code> to link pages.
+    </p>
+
+    <h3>Example </h3>
+    <pre><code>/project-folder/
+  index.html
+  about.html
+  contact.html
+  /video/
+    lecture.mp4
+  /audio/
+    song.mp3</code></pre>
+
+    <h3>Linking pages</h3>
+    <pre><code>&lt;!-- in index.html --&gt;
+&lt;nav&gt;
+  &lt;a href="index.html"&gt;Home&lt;/a&gt; 
+  &lt;a href="about.html"&gt;About&lt;/a&gt; 
+  &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+
+    <h2>Footer Section</h2>
+    <p>
+      The footer usually contains copyright, contact info, and small navigation. In plain HTML:
+    </p>
+    <pre><code>&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2025 Your Site Name. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+
+
+
+    <h2>Header Section &amp; Main Section</h2>
+    <p>
+      Use semantic elements <code>&lt;header&gt;</code> and <code>&lt;main&gt;</code> for structure and better accessibility.
+    </p>
+
+    <pre><code>&lt;header&gt;
+  &lt;h1&gt;Site Title&lt;/h1&gt;
+  &lt;nav&gt; &lt;!-- simple nav links --&gt; &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;h2&gt;Article Title&lt;/h2&gt;
+  &lt;p&gt;Main content goes here.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+  
+    <h2>Autoplay Feature</h2>
+   
+    <pre><code>&lt;audio autoplay muted&gt;
+  &lt;source src="audio/short.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+
+&lt;video autoplay muted loop playsinline&gt;
+  &lt;source src="video/clip.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+
+    <p>
+      <strong>Important:</strong> Modern browsers often block autoplay with sound. A common workaround is <code>muted</code> with autoplay (browsers generally allow muted autoplay). Always consider accessibility — autoplay can be disruptive to users.
+    </p>
+  <h2>Creating Copyright Symbol</h2>
+    <p>
+      Use the HTML entity <code>&amp;copy;</code> or numeric <code>&#169;</code> to display ©. Example:
+    </p>
+    <h3>Other Common Symbol Entities</h3>
+  <table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+      <th>Symbol</th>
+      <th>Description</th>
+      <th>Entity Name</th>
+      <th>Entity Number</th>
+    </tr>
+    <tr>
+      <td>&copy;</td>
+      <td>Copyright</td>
+      <td>&amp;copy;</td>
+      <td>&amp;#169;</td>
+    </tr>
+    <tr>
+      <td>&reg;</td>
+      <td>Registered Trademark</td>
+      <td>&amp;reg;</td>
+      <td>&amp;#174;</td>
+    </tr>
+    <tr>
+      <td>&trade;</td>
+      <td>Trademark</td>
+      <td>&amp;trade;</td>
+      <td>&amp;#8482;</td>
+    </tr>
+    <tr>
+      <td>&lt;</td>
+      <td>Less-than (for showing code)</td>
+      <td>&amp;lt;</td>
+      <td>&amp;#60;</td>
+    </tr>
+    <tr>
+      <td>&gt;</td>
+      <td>Greater-than (for showing code)</td>
+      <td>&amp;gt;</td>
+      <td>&amp;#62;</td>
+    </tr>
+    <tr>
+      <td>&amp;</td>
+      <td>Ampersand</td>
+      <td>&amp;amp;</td>
+      <td>&amp;#38;</td>
+    </tr>
+    <tr>
+      <td>&quot;</td>
+      <td>Double Quote</td>
+      <td>&amp;quot;</td>
+      <td>&amp;#34;</td>
+    </tr>
+    <tr>
+      <td>&euro;</td>
+      <td>Euro Sign</td>
+      <td>&amp;euro;</td>
+      <td>&amp;#8364;</td>
+    </tr>
+  </table>
+
+
+  <hr>
+   
+    <h2>Created by Anushka Mishra</p>
+</body>
+</html>

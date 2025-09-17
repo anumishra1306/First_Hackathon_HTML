@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Boiler Plate</title>
+</head>
+<body>
+    <h2><u>HTML File path:</u></h2>
+<p>In HTML, file paths tell the browser where to find resources like images, CSS, JS, or other HTML files.</p>
+<h3>Types of File Paths: </h3>
+<b>a)Absolute Path</b>
+<ol>
+    <li>An absolute path is the full URL of a resource.</li>
+    <li>Browser ignores your file location; it goes straight to the web address.</li>
+</ol>
+&lt;img src=https://www.example.com/images/logo.png" alt="Website Logo"&gt;
+<br>
+<b>b)Relative Path</b>
+<ol>
+    <li>Relative path depends on the location of your HTML file.</li>
+
+<li>Makes your site portable (works on any server/folder structure).</li>
+    
+</ol>
+<h3>Types of relative paths:</h3>
+<ul>
+    <li><b>Same Folder</b><br>
+        &lt;img src="logo.png" alt="Logo"&gt;
+    </li>
+    <li>
+        <b>Subfolder</b>
+        <br>
+          &lt;img src="images/logo.png" alt="Logo">
+    </li>
+    <li>
+        <b>Parent folder</b> <br>
+      &lt;img src="../logo.png" alt="Logo"  &gt;
+    </li>
+    <li>
+       <b>Nested folder</b>
+       <br>
+         &lt;img src="../assets/images/logo.png" alt="Logo"  &gt;
+    </li>
+</ul>
+ <table border="2px">
+        <tr><th> Organize your project like this:</th></tr>
+        <tr><td>
+    <img src="filepath.png" alt="Internet img" height="300px" width="100%">
+        </td></tr>
+    </table>
+<h2>HTML Boiler Plate</h2>
+<p>An HTML boilerplate is the basic structure of any HTML document. It sets up the necessary elements so the browser can properly render your webpage.</p>
+<table border="2px">
+        <tr><th> Organize your project like this:</th></tr>
+        <tr><td>
+    <img src="./htmlboilerplate.png" alt="Internet img" height="300px" width="100%">
+        </td></tr>
+    </table>
+<h2>The &lt;div&gt; Tag</h2>
+<p>&lt;div&gt; is a container element. It doesn’t have any default styling but is used to group other elements together.</p>
+<ul>
+    <li>&lt;div&gt; helps in structuring your webpage.</li>
+    <li>Often used with <strong>class</strong> or <strong>id</strong> to apply CSS or JavaScript.</li>
+</ul>
+
+<h2> Class </h2>
+<ul>
+    <li>A <strong>class</strong> is used to group multiple elements that share the same styling.</li>
+    <li>Defined using <code>class="name"</code> in HTML.</li>
+    <li>In CSS, use <code>.</code> to target a class.</li>
+</ul>
+<h2>ID</h2>
+
+<ul>
+    <li>An <strong>ID</strong> is unique; only one element should have a particular ID.</li>
+    <li>Defined using <code>id="unique-name"</code> in HTML.</li>
+    <li>In CSS, use <code>#</code> to target an ID.</li>
+</ul>
+<u><b>Comparison between Class and ID:-</b></u>
+<table border="1" cellspacing="0" cellpadding="10">
+    <tr>
+        <th>Feature</th>
+        <th>Class</th>
+        <th>ID</th>
+    </tr>
+    <tr>
+        <td>Uniqueness</td>
+        <td>Can be used on multiple elements</td>
+        <td>Must be unique; only one element</td>
+    </tr>
+    <tr>
+        <td>HTML Syntax</td>
+        <td>class="name"</td>
+        <td>id="unique-name"</td>
+    </tr>
+    <tr>
+        <td>CSS Selector</td>
+        <td><code>.classname { }</code></td>
+        <td><code>#idname { }</code></td>
+    </tr>
+    <tr>
+        <td>Purpose</td>
+        <td>Group multiple elements with same style/behavior</td>
+        <td>Target a single specific element</td>
+    </tr>
+</table>
+<hr>
+  <h3><a href="page5.html">Click for  the next page</a></h3>
+</body>
+</html>

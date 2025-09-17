@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Html Project By Coder Army</title>
+</head>
+<body>
+    <h1><u>Internet:</u> </h1>
+    <p>The Internet is a global network of interconnected computers that communicate using a common set of protocols (mainly TCP/IP).</p>
+    <ol>
+        <li>It connects billions of devices worldwide (computers, smartphones, servers, IoT devices).</li>
+        <li>Uses physical infrastructure (cables, satellites, Wi-Fi) and logical infrastructure (protocols, IP addressing).</li>
+    </ol>
+    <h2>How is Data Transferred?</h2>
+    <p>
+        <ul>
+            <li>Information (e.g., a webpage) is broken into small packets.</li>
+            <li>Each packet contains: source address, destination address, and data.</li>
+            <li>Packets travel through routers/switches, possibly taking different paths.</li>
+            <li>At the destination, packets are reassembled into the original message.</li>
+        </ul>
+    </p>
+    <table border="2px">
+        <tr><th>Below Image shows how the internet transfers data over the internet.</th></tr>
+        <tr><td>
+    <img src="https://static.vecteezy.com/system/resources/previews/002/167/753/large_2x/data-transfer-with-internet-cloud-technology-free-vector.jpg" alt="Internet img" height="500px" width="500px">
+        </td></tr>
+    </table>
+    <h4>Protocols: </h4>
+    <ul>
+        <li>TCP (Transmission Control Protocol): Ensures reliable delivery, correct order, error checking.</li>
+        <li>UDP (User Datagram Protocol): Faster, but no reliability (used in video streaming, gaming).</li>
+    </ul>
+    <h2>What is an IP Address?</h2>
+    <p>An IP address (Internet Protocol Address) is a unique identifier for a device on a network.</p>
+<ul>
+    <li>Example: 192.168.1.1 (IPv4), 2001:db8:85a3::8a2e:370:7334 (IPv6).</li>
+    <li>Without IPs, computers wouldn’t know where to send/receive data.</li>
+</ul>
+<p>Like a home address for your computer on the internet.</p>
+<h2>How to Access a Website</h2>
+<p>Steps when you type www.example.com into a browser:</p>
+<ul>
+    <li>Browser checks its cache/DNS for the IP of example.com.</li>
+    <li>If not found, DNS resolves it (explained later).</li>
+    <li>Browser sends an HTTP/HTTPS request to the server IP.</li>
+      <li>Server processes the request and sends back HTML, CSS, JS.</li>
+    <li>Browser renders the page for you.</li>
+</ul>
+<h2>MAC Address: </h2>
+<p>A MAC (Media Access Control) Addressis a unique, permanent serial number burned into every network-capable piece of hardware (your laptop's Wi-Fi card, your phone, your smart TV, the network port on your desktop).
+
+To track you, if you get offline and someone get the ip, they will get your message.
+
+A MAC address is a 48-bit number. To make it readable for humans, it's typically written as 12 hexadecimal digits.</p>
+   
+<ul>
+    <li>Hyphen-Separated (Common on Windows): 3C-22-FB-A3-B4-C5 </li>
+    <li>Period-Separated (Used by Cisco and other network gear):3c22.fba3.b4c5</li>
+    <li>No Separators (Less common, seen in some software):3C22FBA3B4C5</li>
+    <li>Colon-Separated (Most Common):3C:22:FB:A3:B4:C5</li>
+</ul>
+<h2>Port Number: </h2>
+<p>Port numbers are numerical identifiers (0-65535) in computer networking that identify specific applications or services on a device. They work with IP addresses to direct network traffic to the correct service on a machine, with common ports assigned to standard applications like HTTP (port 80) and HTTPS (port 443).</p>
+<h5>Example: </h5>
+<ul>
+    <li>HTTP → Port 80</li>
+
+<li>HTTPS → Port 443</li>
+
+<li>FTP → Port 21</li>
+</ul>
+<h5>Range: 0-65535</h5>
+<ul>
+    <li>0–1023: Well-known ports</li>
+    <li>1024–49151: Registered ports</li>
+    <li>49152–65535: Dynamic/private ports</li>
+</ul>
+<h2>DNS : Domain Name System </h2>
+<p>DNS is the global, distributed system that translates the human-friendly domain names into the computer-friendly IP addresses. Without it, you'd have to memorize hundreds of IP addresses to browse the web.
+    <ul>
+        <li>Converts domain names (google.com) into IP addresses (142.250.64.78).</li>
+<li>So humans don’t need to memorize numbers.</li>
+    </ul>
+</p>
+<h3>In-depth Working of DNS</h3>
+<p>Example: Visiting www.facebook.com <br>
+    <ul>
+       <li> <b>Browser</b> → asks local DNS resolver.</li>
+
+<li><b>Resolver</b> → checks cache; if not found, queries root server.</li>
+
+<li><b>Root server</b> → tells which TLD server to ask (.com).</li>
+
+
+<li><b>TLD server </b>→ points to Facebook’s authoritative server.</li>
+
+<li><b>Authoritative server</b> → returns IP 157.240.229.35.</li>
+
+<li><b>Browser </b> →contacts that IP → loads website.</li>
+    </ul>
+</p>
+   <table border="2">
+        <tr><th>Below Image shows how the DNS works  over the internet.</th></tr>
+        <tr><td>
+    <img src="https://tse4.mm.bing.net/th/id/OIP.zoeko1Wm_aofQs0_LY0GGAHaEr?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Internet img" height="500px" width="500px">
+        </td></tr>
+    </table>
+    <h2>What is IPv4?</h2>
+    <p>IPv4 (Internet Protocol Version 4) is the fourth version of the Internet Protocol, introduced in 1983.
+        <ul>
+            <li>It uses a 32-bit address → about 4.3 billion unique addresses.</li>
+<li>Example: 192.168.1.1</li>
+        </ul>
+        <h4>IPv4 Features:</h4>
+        <ul>
+  <li>Widely used, but address shortage is a major issue.</li>
+  <li>Supports manual and DHCP (dynamic) configuration.</li>
+  <li>Provides simple addressing and routing.</li>
+</ul>
+    </p>
+    <h2>What is IPv6?</h2>
+    <p>IPv6 (Internet Protocol Version 6) is the latest version, developed to solve IPv4 exhaustion.
+        <ul>
+  <li>Uses 128-bit address → about 340 undecillion addresses (virtually infinite).</li>
+  <li>Example: 2001:0db8:85a3:0000:0000:8a2e:0370:7334</li>
+</ul>
+<h4>IPv6 Features:</h4>
+<ul>
+  <li>Larger address space (solves IPv4 shortage).</li>
+  <li>Built-in security (IPSec).</li>
+  <li>Better support for mobile devices and IoT.</li>
+  <li>More efficient packet processing (no NAT required).</li>
+</ul>
+    </p>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>IPv4</th>
+      <th>IPv6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Address Size</td>
+      <td>32-bit (4 bytes)</td>
+      <td>128-bit (16 bytes)</td>
+    </tr>
+    <tr>
+      <td>Number of Addresses</td>
+      <td>~4.3 billion</td>
+      <td>~340 undecillion</td>
+    </tr>
+    <tr>
+      <td>Address Format</td>
+      <td>Decimal, separated by dots<br>(192.168.1.1)</td>
+      <td>Hexadecimal, separated by colons<br>(2001:db8::1)</td>
+    </tr>
+    <tr>
+      <td>Header Complexity</td>
+      <td>Simple, 20 bytes</td>
+      <td>More complex, 40 bytes</td>
+    </tr>
+    <tr>
+      <td>Security</td>
+      <td>Security optional (SSL/TLS needed)</td>
+      <td>Built-in IPSec support</td>
+    </tr>
+    <tr>
+      <td>Configuration</td>
+      <td>Manual or DHCP</td>
+      <td>Auto-configuration + DHCPv6</td>
+    </tr>
+    <tr>
+      <td>Broadcast</td>
+      <td>Supports broadcast</td>
+      <td>No broadcast (uses multicast & anycast)</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Local Area Network (LAN)</h2>
+  <p>
+    A Local Area Network (LAN) is a network covering a small geographical area, such as a home, office, or school. 
+    It connects devices like computers, printers, and servers, allowing high-speed communication and resource sharing.
+  </p>
+
+  <h2>Switch & Router</h2>
+  <ul>
+    <li><b>Switch:</b> Connects devices within a LAN and forwards data based on MAC addresses.</li>
+    <li><b>Router:</b> Connects different networks (LAN to the internet) and forwards data using IP addresses.</li>
+  </ul>
+
+  <h2>Public and Private Addresses</h2>
+  <ul>
+    <li><b>Private IP:</b> Used within LANs (e.g., 192.168.x.x, 10.x.x.x) and not routable on the internet.</li>
+    <li><b>Public IP:</b> Globally unique, provided by ISPs, and used for internet communication.</li>
+  </ul>
+  <p>Routers use <b>NAT (Network Address Translation)</b> to map private IPs to public IPs.</p>
+
+  <h2>Modern Routers</h2>
+  <p>
+     Modern routers combine the functions of a switch, router, firewall, and wireless access point. 
+    They provide DHCP services, built-in security (firewalls, encryption), and support for both IPv4 and IPv6.
+  </p>
+  <h1><u>Web Devlopment:</u>
+  </h1>
+  <h2>Definition</h2>
+  <p>
+    Web development is the process of creating and maintaining websites and web applications that run on the internet.
+  </p>
+  <h2>Types of Web Development</h2>
+  <ul>
+    <li><b>Front-End (Client-Side):</b> Focuses on what users see in their browser. Uses HTML, CSS, and JavaScript.</li>
+    <li><b>Back-End (Server-Side):</b> Handles logic, databases, and server communication. Uses PHP, Node.js, Python, Java, etc.</li>
+    <li><b>Full-Stack Development:</b> Combines both front-end and back-end development.</li>
+  </ul>
+  <h1><u>What is the MERN Stack?</u></h1>
+  <p>The MERN Stack is a popular set of technologies used for full-stack web development.
+It is called “MERN” because it includes MongoDB, Express.js, React, and Node.js.
+<br>
+The specialty of MERN is that everything is based on JavaScript — frontend, backend, and even database queries.The specialty of MERN is that everything is based on JavaScript — frontend, backend, and even database queries.
+<img src="https://tse2.mm.bing.net/th/id/OIP.SabOvES5OW-YZVHeHjLfVwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="mern" height="400px" width="700px">
+<hr>
+<h3><a href="page2.html">Click for  the next page</a></h3>
+</body>
+</html>

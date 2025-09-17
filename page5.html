@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    
+</head>
+<body>
+
+    <h1><u>HTML Forms</u></h1>
+    <p>HTML forms are used to collect user input. They consist of form elements like text fields, checkboxes, radio buttons, dropdowns, and buttons.</p>
+
+    <h2>1. Basic Form Structure</h2>
+    <p>The <code>&lt;form&gt;</code> tag defines a form. Its common attributes are:</p>
+    <ul>
+        <li><code>action</code>: URL where the form data is sent.</li>
+        <li><code>method</code>: HTTP method to submit the form. Common values are <code>get</code> and <code>post</code>.</li>
+        <li><code>name</code>: Name of the form.</li>
+        <li><code>id</code>: Unique identifier.</li>
+    </ul>
+
+    
+        <h3>Example:</h3>
+        <pre>
+&lt;form  method="post"&gt;
+    &lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+        </pre>
+    <table border="2px">
+        <tr><th>Below Image shows the output of above code .</th></tr>
+        <tr><td>
+    <img src="form_output.png" alt="Internet img" height="300px" width="500px">
+        </td></tr>
+    </table>
+
+    <h2>2. Common Form Input Types</h2>
+    <ul>
+        <li><code>text</code>: Single-line text input.</li>
+        <li><code>password</code>: Text input where characters are hidden.</li>
+        <li><code>email</code>: Input for email addresses.</li>
+        <li><code>number</code>: Input for numbers.</li>
+        <li><code>radio</code>: Select one option from a group.</li>
+        <li><code>checkbox</code>: Select multiple options.</li>
+        <li><code>file</code>: Upload files.</li>
+        <li><code>submit</code>: Button to submit the form.</li>
+        <li><code>reset</code>: Button to reset the form fields.</li>
+        <li><code>button</code>: Generic button for JS actions.</li>
+        <li><code>date, time, color, range</code>: Special input types for modern browsers.</li>
+    </ul>
+
+    <h2>3. Form Labels and Attributes</h2>
+    <p>The <code>&lt;label&gt;</code> tag defines a label for an input. Use the <code>for</code> attribute to link it to an input's <code>id</code>.</p>
+
+    <div class="example">
+        <h3>Example:</h3>
+        <pre>
+&lt;label for="age"&gt;Enter your age:&lt;/label&gt;
+&lt;input type="number" id="age" name="age" min="1" max="100"&gt;
+        </pre>
+    </div>
+
+    <h2>4. Form Textareas and Dropdowns</h2>
+    <p><code>&lt;textarea&gt;</code> is used for multi-line text, and <code>&lt;select&gt;</code> creates dropdown lists.</p>
+
+    <div class="example">
+        <h3>Example:</h3>
+        <pre>
+&lt;label for="bio"&gt;Your Bio:&lt;/label&gt;&lt;br&gt;
+&lt;textarea id="bio" name="bio" rows="4" cols="50"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;label for="gender"&gt;Gender:&lt;/label&gt;
+&lt;select id="gender" name="gender"&gt;
+    &lt;option value="male"&gt;Male&lt;/option&gt;
+    &lt;option value="female"&gt;Female&lt;/option&gt;
+    &lt;option value="other"&gt;Other&lt;/option&gt;
+&lt;/select&gt;
+        </pre>
+    </div>
+
+    <h2>Complete Form Example</h2>
+  
+    
+&lt;!DOCTYPE html&gt; <br>
+&lt;html lang=&quot;en&quot;&gt;<br>
+&lt;head&gt;<br>
+  &lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+  &lt;title&gt;Registration Form&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+  &lt;h3&gt;Registration Form&lt;/h3&gt;<br>
+  &lt;form&gt;<br>
+    &lt;label for=&quot;username&quot;&gt;Username:&lt;/label&gt;<br>
+    &lt;input type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot;&gt;&lt;br&gt;&lt;br&gt;<br>
+
+    &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;<br>
+    &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;&lt;br&gt;&lt;br&gt;<br>
+
+    &lt;label for=&quot;password&quot;&gt;Password:&lt;/label&gt;
+    <br>
+    &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot;&gt;&lt;br&gt;&lt;br&gt;<br>
+
+    &lt;label for=&quot;gender&quot;&gt;Gender:&lt;/label&gt;
+    <br>
+    &lt;select id=&quot;gender&quot; name=&quot;gender&quot;&gt;
+<br>
+      &lt;option value=&quot;male&quot;&gt;Male&lt;/option&gt;
+      <br>
+      &lt;option value=&quot;female&quot;&gt;Female&lt;/option&gt;
+      <br>
+      &lt;option value=&quot;other&quot;&gt;Other&lt;/option&gt;
+      <br>
+    &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+    <br>
+
+    &lt;label&gt;Hobbies:&lt;/label&gt;&lt;br&gt;<br>
+    &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;reading&quot;&gt; Reading&lt;br&gt;<br>
+    &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;gaming&quot;&gt; Gaming&lt;br&gt;<br>
+    &lt;input type=&quot;checkbox&quot; name=&quot;hobby&quot; value=&quot;traveling&quot;&gt; Traveling&lt;br&gt;&lt;br&gt;<br>
+
+    &lt;input type=&quot;submit&quot; value=&quot;Register&quot;&gt;<br>
+    &lt;input type=&quot;reset&quot; value=&quot;Reset&quot;&gt;<br>
+  &lt;/form&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;<br>
+
+        <table border="2px">
+        <tr><th>Below Image shows output of above code.</th></tr>
+        <tr><td>
+    <img src="form2.png" height="500px" width="500px">
+        </td></tr>
+    </table>
+<br>
+<h2>5.HTML &lt;form&gt; Attributes</h2>
+  <ol>
+    <li><b>action</b>
+      <p>Defines where the form data will be sent after submission.</p>
+      <pre><code>&lt;form action="submit.php"&gt;&lt;/form&gt;</code></pre>
+    </li>
+
+    <li><b>method</b>
+      <p>Defines how form data is sent to the server.</p>
+      <ul>
+        <li>GET → Data visible in URL</li>
+        <li>POST → Data sent securely in body</li>
+      </ul>
+      <pre><code>&lt;form method="post"&gt;&lt;/form&gt;</code></pre>
+    </li>
+
+    <li><b>target</b>
+      <p>Defines where the result is shown.</p>
+      <ul>
+        <li>_self → Same page (default)</li>
+        <li>_blank → New tab</li>
+      </ul>
+      <pre><code>&lt;form target="_blank"&gt;&lt;/form&gt;</code></pre>
+    </li>
+
+    <li><b>name</b>
+      <p>Gives a name to the form (used in JavaScript).</p>
+      <pre><code>&lt;form name="regForm"&gt;&lt;/form&gt;</code></pre>
+    </li>
+
+  <h2> 6.HTML <code>&lt;input&gt;</code> Attributes</h2>
+  <ol>
+    <li><b>type</b>
+      <p>Defines the input type.</p>
+      <pre><code>&lt;input type="email" name="userEmail"&gt;</code></pre>
+    </li>
+
+    <li><b>name</b>
+      <p>Used to identify the field (sent to server).</p>
+      <pre><code>&lt;input type="text" name="username"&gt;</code></pre>
+    </li>
+
+    <li><b>id</b>
+      <p>Unique identifier for label/JS.</p>
+      <pre><code>&lt;input type="text" id="user"&gt;
+&lt;label for="user"&gt;Enter Name&lt;/label&gt;</code></pre>
+    </li>
+
+    <li><b>value</b>
+      <p>Default value or button text.</p>
+      <pre><code>&lt;input type="text" value="Default Name"&gt;</code></pre>
+    </li>
+
+    <li><b>placeholder</b>
+      <p>Hint text.</p>
+      <pre><code>&lt;input type="text" placeholder="Enter your name"&gt;</code></pre>
+    </li>
+
+    <li><b>required</b>
+      <p>Mandatory field.</p>
+      <pre><code>&lt;input type="email" required&gt;</code></pre>
+    </li>
+
+    <li><b>disabled</b>
+      <p>Cannot edit &amp; not submitted.</p>
+      <pre><code>&lt;input type="text" value="Disabled" disabled&gt;</code></pre>
+    </li>
+
+    <li><b>maxlength / minlength</b>
+      <p>Character limits.</p>
+      <pre><code>&lt;input type="text" maxlength="10" minlength="3"&gt;</code></pre>
+    </li>
+
+    <li><b>size</b>
+      <p>Visible width (characters).</p>
+      <pre><code>&lt;input type="text" size="30"&gt;</code></pre>
+    </li>
+  </ol>
+<hr>
+<h3><a href="page6.html">Click for  the next page</a></h3>
+
+</body>
+</html>
